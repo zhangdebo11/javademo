@@ -7,6 +7,8 @@ spring cloud
     RestController
     Controller
     GetMapping
+    Component
+    Override
 feign
 泛型
 JVM调优

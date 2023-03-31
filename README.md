@@ -12,3 +12,7 @@ feign
 JVM调优
 Servlet
 application.yml
+@bean
+IOC控制反转
+AOP面向切面
+设计模式：单例模式  工厂模式

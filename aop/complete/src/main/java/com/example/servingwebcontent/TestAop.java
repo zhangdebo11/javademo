@@ -19,6 +19,7 @@ public class TestAop {
 	public Object checkUser(ProceedingJoinPoint pp){
 		System.out.println("**************The System is Searching Information For You****************");
 		Object o = null;
+		System.out.println(pp.getSignature()); // String com.example.servingwebcontent.GreetingController.greeting(String,Model)
 		try {
 			o = pp.proceed();
 		} catch (Throwable e ) {

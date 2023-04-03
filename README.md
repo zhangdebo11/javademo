@@ -3,12 +3,16 @@
 如何使用gradle
 spring cloud
 常用注解
+    Bean
+    Configuration
     SpringBootApplication
     RestController
     Controller
     GetMapping
     Component
     Override
+    Autowired
+    FunctionalInterface
 feign
 泛型
 JVM调优
@@ -20,3 +24,6 @@ AOP面向切面
 设计模式：单例模式  工厂模式
 JPA
 连接redis
+泛型
+约定大于配置
+自定义注解

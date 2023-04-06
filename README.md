@@ -8,7 +8,7 @@ spring cloud
     SpringBootApplication
     RestController
     Controller
-    GetMapping
+    GetMapping PostMapping RequestMapping ...
     Component
     Override
     Autowired
@@ -18,6 +18,7 @@ feign
 JVM调优
 Servlet
 application.yml
+bootstrap.yml
 @bean
 IOC控制反转
 AOP面向切面

@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.RedisSentinelConfiguration;
+import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
+import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
@@ -20,6 +23,7 @@ public class MessagingRedisApplication {
 	@Bean
 	RedisMessageListenerContainer container(RedisConnectionFactory connectionFactory,
 			MessageListenerAdapter listenerAdapter) {
+		
 
 		RedisMessageListenerContainer container = new RedisMessageListenerContainer();
 		container.setConnectionFactory(connectionFactory);
@@ -41,6 +45,12 @@ public class MessagingRedisApplication {
 	@Bean
 	StringRedisTemplate template(RedisConnectionFactory connectionFactory) {
 		return new StringRedisTemplate(connectionFactory);
+	}
+
+	@Bean
+	public RedisConnectionFactory lettuceConnectionFactory() {
+		RedisStandaloneConfiguration sentinelConfig = new RedisStandaloneConfiguration("192.168.56.101", 6379);
+		return new LettuceConnectionFactory(sentinelConfig);
 	}
 
 	public static void main(String[] args) throws InterruptedException {

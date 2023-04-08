@@ -13,11 +13,13 @@ spring cloud
     Override
     Autowired
     FunctionalInterface
+    Data
 feign
 泛型
 JVM调优
 Servlet
-application.yml
+application.yml 
+    如何读取application.yml里面的变量
 bootstrap.yml
 @bean
 IOC控制反转
@@ -28,3 +30,6 @@ JPA
 泛型
 约定大于配置
 自定义注解
+
+
+redis：数据类型，常见问题（雪崩。。。）

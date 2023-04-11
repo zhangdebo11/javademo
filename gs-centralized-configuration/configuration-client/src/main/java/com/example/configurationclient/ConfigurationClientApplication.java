@@ -35,7 +35,7 @@ public class ConfigurationClientApplication {
 @RestController
 class MessageRestController {
 
-	@Value("${message:Hello default}")
+	@Value("${aa.bb:ddddddddddd}")
 	private String message;
 
 	@RequestMapping("/message")

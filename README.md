@@ -1,3 +1,4 @@
+数据类型
 如何打包jar或者war
 如何运行jar或者war
 如何使用gradle
@@ -30,6 +31,11 @@ JPA
 泛型
 约定大于配置
 自定义注解
-
+多线程，并发编程
+    线程的三种实现方法：Thread、Runable、Callable
 
 redis：数据类型，常见问题（雪崩。。。）
+java垃圾回收
+访问权限 private，无（包访问权限），protected 和 public
+
+定时器
